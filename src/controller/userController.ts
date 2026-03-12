@@ -19,8 +19,8 @@ export const login = async (req: Request, res: Response) => {
 
     if (user.username === username && user.password === password) {
         const payload = {
-            username: 'admin',
-            role: 'admin'
+            username,
+            role: user.role
         };
 
         const token = jwt.sign(payload, privateKey, { algorithm: 'RS256', expiresIn: '1h' });
