@@ -5,7 +5,7 @@ import UserRouter from './models/userModel';
 const app = express();
 app.use(express.json());
 
-app.use('/user', UserRouter);
+app.use('/auth', UserRouter);
 
 const PORT = process.env.PORT || 3000;
 

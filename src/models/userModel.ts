@@ -3,7 +3,7 @@ import { login, verify } from '../controller/userController';
 
 const router = express.Router();
 
-router.post('/auth/login', login);
-router.post('/auth/verify', verify);
+router.post('/login', login);
+router.post('/verify', verify);
 
 export default router;
